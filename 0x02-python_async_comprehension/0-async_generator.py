@@ -7,12 +7,12 @@ The coroutine will loop 10 times, each time asynchronously wait
 Use the random module.
 """
 
-from typing import AsyncGenerator
+from typing import Generator
 import random
 import asyncio
 
 
-async def async_generator() -> AsyncGenerator[float, None]:
+async def async_generator() -> Generator[float, None, None]:
     """asynchronois generator"""
     for i in range(10):
         await asyncio.sleep(1)
